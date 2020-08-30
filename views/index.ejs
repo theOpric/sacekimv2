@@ -1,0 +1,724 @@
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+    <div style="display:none" id="analiz" class="analizwizard bg-gray">
+        <i id="hideShowAnaliz" class="ion-md-arrow-dropdown-circle"></i>
+        <div style="display:inline" id="step1">
+            <div id="step1Header">
+                <button id="oneMinuteAnalizOpened" class="analizHeader"></button>
+            </div>
+            <div id="step1">
+                <img class="genderImg genderMale rounded-circle" src="/public/images/home/analizMan.png" />
+                <img class="genderImg genderWoman rounded-circle" src="/public/images/home/analizWoman.png" />
+                <p id="step1Text"></p>
+            </div>
+        </div>
+        <div style="display:none" id="headerAnaliz1">
+            <h4 id="headerAnaliz1H4" class="headerDokulme"></h4>
+            <hr>
+        </div>
+        <div id="step2" class="col-md-12" style="display: none;">
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/12x.png" />
+                <img class="selectTip" src="/public/images/home/male/22x.png" />
+                <img class="selectTip" src="/public/images/home/male/32x.png" />
+            </div>
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/42x.png" />
+                <img class="selectTip" src="/public/images/home/male/52x.png" />
+                <img class="selectTip" src="/public/images/home/male/62x.png" />
+            </div>
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/72x.png" />
+                <img class="selectTip" src="/public/images/home/male/82x.png" />
+                <img class="selectTip" src="/public/images/home/male/92x.png" />
+            </div>
+            <div style="display:inline" class="dokulmeKadin">
+                <img class="selectTip" src="/public/images/home/female/12x.png" />
+                <img class="selectTip" src="/public/images/home/female/22x.png" />
+                <img class="selectTip" src="/public/images/home/female/32x.png" />
+            </div>
+            <div style="display:inline" class="dokulmeKadin">
+                <img class="selectTip" src="/public/images/home/female/42x.png" />
+                <img class="selectTip" src="/public/images/home/female/52x.png" />
+                <img class="selectTip" src="/public/images/home/female/62x.png" />
+            </div>
+            <div id="prevButtons">
+                <button class="bottom-left prevBtn" name="goTo1"></button>
+                <button id="notSureBtn"></button>
+            </div>
+        </div>
+        <div style="display:none" id="headerAnaliz2" class="headerAnaliz">
+            <h4 id="yasH4" class="headerYas"></h4>
+            <hr>
+        </div>
+        <div id="step3" style="display: none;">
+            <button class="yasBtn">18-25</button>
+            <button class="yasBtn">26-35</button>
+            <button class="yasBtn">36-45</button>
+            <button class="yasBtn">45+</button>
+        </div>
+        <div style="display: none;" id="prevButtons1" class="prevButtons">
+            <button class="bottom-left prevBtn"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz3" class="headerAnaliz">
+            <h4 id="ilacH4"></h4>
+            <hr>
+        </div>
+        <div id="step4" style="display: none;">
+            <button id="ilacHayirBtn" class="yasBtn"></button>
+            <button id="ilacEvetBtn" class="yasBtn"></button>
+            <input id="ilacEvet" maxlength="100" class="ilacInput input-spinner" placeholder="" type="text" />
+            <button id="ilacInputEvet" class="nextBtn1"></button>
+        </div>
+        <div style="display: none;" id="prevButtons2" class="prevButtons">
+            <button class="bottom-left prevBtn"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz4" class="headerAnaliz">
+            <h3 id="hastalikH4" class="headerYas"></h3>
+            <hr>
+        </div>
+        <div id="step5" style="display: none;">
+            <button id="btnHIV" class="yasBtn2"></button>
+            <button id="btnHepatit" class="yasBtn2"></button>
+            <button id="btnKalp" class="yasBtn2"></button>
+            <button id="btnHastalikYok" class="yasBtn2"></button>
+        </div>
+        <div style="display: none;" id="prevButtons3">
+            <button class="bottom-left prevBtn" name="goTo4"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz5" class="headerAnaliz">
+            <h3 id="analizH3" class="headerYas"></h3>
+            <hr>
+        </div>
+        <div id="step6" style="display: none;">
+            <input id="phoneInput" placeholder="" type="text" />
+            <input id="analizInputNameSurname" class="ilacInput input-spinner" placeholder="" type="text" />
+            <input id="analizInputMail" class="ilacInput input-spinner" placeholder="" type="email" />
+            <button id="completeBtn"></button>
+        </div>
+        <div style="display: none;" id="prevButtons4">
+            <button class="bottom-left prevBtn" name="goTo5"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz6" class="headerAnaliz">
+            <h3 id="analizSuccess" class="headerYas"></h3>
+            <hr>
+        </div>
+        <div id="step7" style="display: none;">
+            <p id="completeText"></p>
+            <button id="closeBtn"></button>
+        </div>
+    </div>
+    <button style="display:inline" id="oneMinuteAnalizClosed" class="analizHeader2"></button>
+
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+        <div style="height:70px;" class="container">
+            <a class="navbar-brand" href="/"><img height="101" width="200" src="/public/images/homelogo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#svkn-navbar"
+                aria-controls="svkn-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="ion-md-menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="svkn-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a id="homeText" class="nav-link" href="#section-home"></a></li>
+                    <li class="nav-item"><a id="aboutText" class="nav-link" href="#section-about"></a></li>
+                    <li class="nav-item"><a id="whyUsText" class="nav-link" href="#section-why-us"></a></li>
+                    <li class="nav-item"><a id="sliderText" class="nav-link"
+                            href="#section-practicing-areas"></a></li>
+                    <li class="nav-item"><a id="myHospitalsText" class="nav-link" href="#section-attorneys"></a></li>
+                    <li class="nav-item"><a id="commentsText" class="nav-link" href="#section-testimonials"></a></li>
+                    <li class="nav-item"><a id="contactText" class="nav-link" href="#section-contact"></a></li>
+                    <li class="nav-item"><a class="nav-link">
+                            <select id="languageSelector" class="selectpicker" style="outline: 0px; border:0px"
+                                data-width="fit">
+                                <option style="color:black !important;" id="lang-tr"
+                                    data-content='<span class="flag-icon flag-icon-tr"></span> Türkçe' value="Türkçe">
+                                </option>
+                                <option style="color:black !important;" class="active" id="lang-en"
+                                    data-content='<span class="flag-icon flag-icon-us"></span> English' value="English">
+                                </option>
+                                <option style="color:black !important;" id="lang-es"
+                                    data-content='<span class="flag-icon flag-icon-mx"></span> Español' value="Español">
+                                </option>
+                                <option style="color:black !important;" id="lang-fr"
+                                    data-content='<span class="flag-icon flag-icon-fr"></span> Français'
+                                    value="Français">
+
+                                </option>
+                                <option style="color:black !important;" id="lang-de"
+                                    data-content='<span class="flag-icon flag-icon-de"></span> Deutsch' value="Deutsch">
+                                </option>
+                                <option style="color:black !important;" id="lang-it"
+                                    data-content='<span class="flag-icon flag-icon-it"></span> Italiano'
+                                    value="Italiano">
+
+                                </option>
+                                <option style="color:black !important;" id="lang-ar"
+                                    data-content='<span class="flag-icon flag-icon-ae"></span> العربية' value="العربية">
+                                </option>
+                                <option style="color:black !important;" id="lang-pt"
+                                    data-content='<span class="flag-icon flag-icon-pt"></span> Português'
+                                    value="Português">
+
+                                </option>
+                                <option style="color:black !important;" id="lang-ru"
+                                    data-content='<span class="flag-icon flag-icon-ru"></span> Pусский' value="Pусский">
+                                </option>
+                            </select></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4"
+        style="background-image: url(/public/images/htModel.jpg)" id="section-home">
+        <div class="container">
+            <div class="row align-items-center justify-content-end">
+                <div class="col-md-6">
+                    <h6 class="heading">
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;"
+                            class="flag-icon flag-icon-us"></span>
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;" class="flag-icon flag-icon-nl">
+                        </span>
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;"
+                            class="flag-icon flag-icon-de"></span>
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;"
+                            class="flag-icon flag-icon-gb"></span>
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;" class="flag-icon flag-icon-tr">
+                        </span>
+                        <span style="margin-left: 15px; font-size: 42px; opacity: 0.8;"
+                            class="flag-icon flag-icon-fr"></span>
+                    </h6>
+                    <div class="sub-heading">
+                        <p id="bannerText" class="mb-5"></p>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label style="color: white;" id="contactNameInput2Label" for="contactNameInput2"> </label>
+                                <input style="opacity: 0.9;" type="text" class="form-control p-3 rounded-0"
+                                    id="contactNameInput2">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label style="color: white;" id="contactEmailInput2Label" for="contactEmailInput2"> </label>
+                                <input style="opacity: 0.9;" type="text" class="form-control p-3 rounded-0"
+                                    id="contactEmailInput2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color: white;" id="contactTextarea2Label" for="contactTextarea2"> </label>
+                        <textarea style="opacity: 0.9;" cols="30" rows="3" class="form-control p-3 rounded-0"
+                            id="contactTextarea2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button id="contactInfoBtn2"
+                            class="btn pb_outline-light pb_font-13 pb_letter-spacing-2 p-3 rounded-0"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+
+    <section class="pb_section pb_section_v1" data-section="about" id="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 pr-md-5 pr-sm-0">
+                    <h2 id="whyUsHeader" style="color: #2980B9;" class="mt-0 heading-border-top mb-3 font-weight-normal"></h2>
+                    <p id="whyUsText1"></p>
+                    <p id="whyUsTex2"></p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="images">
+                        <img class="img1 img-fluid" src="/public/images/manzara.jpeg">
+                        <img class="img2" src="/public/images/doctor.jpeg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+
+    <section style="background-image: url(/public/images/arka.png); background-size: cover;"
+        class="pb_section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="media pb_media_v2 d-block text-center mb-3">
+                        <div class="icon border border-gray rounded-circle d-block mr-3 display-4 mx-auto mb-4"><i
+                                class="ion-md-create"></i></div>
+                        <div class="media-body">
+                            <h2 id="method1Header" style="font-weight: bold !important;" class="mt-0 pb_font-20"></h2>
+                            <p id="method1Text" style="font-weight: bold;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="media pb_media_v2 d-block text-center  mb-3">
+                        <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i
+                                class="ion-md-color-filter"></i></div>
+                        <div class="media-body">
+                            <h2 id="method2Header" style="font-weight: bold !important;" class="mt-0 pb_font-20"></h2>
+                            <p id="method2Text" style="font-weight: bold;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="media pb_media_v2 d-block text-center  mb-3">
+                        <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i
+                                class="ion-md-snow"></i></div>
+                        <div class="media-body">
+                            <h2 id="method3Header" style="font-weight: bold !important;" class="mt-0 pb_font-20"></h2>
+                            <p id="method3Text" style="font-weight: bold;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section" data-section="why-us" id="section-why-us">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="whyUsHeaderText" class="mt-0 heading-border-top font-weight-normal"></h2>
+                    <p id="whyUsHeaderText2"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="images right">
+                        <img class="img1 img-fluid" src="/public/images/whyOn.jpeg">
+                        <img class="img2" src="/public/images/whyArka.jpeg">
+                    </div>
+                </div>
+                <div class="col-lg-5 pl-md-5 pl-sm-0">
+                    <p><i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i> <span id="whyUsListText1"></span></br></br>
+                        <i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i> <span id="whyUsListText2"></span>
+                        </br></br>
+                        <i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i><span id="whyUsListText3"></span>
+                        </br></br>
+                        <i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i> <span id="whyUsListText4"></span>
+                        </br></br>
+                        <i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i><span id="whyUsListText5"> </span>
+                        </br></br>
+                        <i style="font-size:24px;" class="ion-md-checkmark-circle-outline"></i> <span id="whyUsListText6"></span></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section">
+        <div class="row justify-content-md-center text-center mb-5">
+            <div class="col-lg-7">
+                <h2 id="beforeAfterHeader" class="mt-0 heading-border-top font-weight-normal"></h2>
+            </div>
+        </div>
+        <div id="beforeAfter" class="multiple-items pb_slide_v1">
+
+        </div>
+
+    </section>
+    <!-- END section -->
+
+
+    <section class="pb_section pb_bg-half" data-section="practicing-areas" id="section-practicing-areas">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="sliderHeaderText" class="mt-0 heading-border-top font-weight-normal"></h2>
+                    <p id="sliderHeaderSubText"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div id="slidersCerceve" class="single-item pb_slide_v2">
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section bg-light bg-image with-overlay" data-section="attorneys" id="section-attorneys"
+        style="background-image: url(/public/images/hastanelerimizManzara.jpg); background-size: cover;">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="myHospitalsHeader" class="mt-0 heading-border-top light font-weight-normal text-white"></h2>
+                    <p id="myHospitalsSubText" class="text-white"></p>
+                    <p id="myHospitalsSubText2" class="text-white"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="card text-center pb_card_v1 mb-4">
+                        <div style=" background-size: cover;height: 300px;background-image: url(/public/images/hastane1.jpg);"
+                            class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card text-center pb_card_v1 mb-4">
+                        <div style=" background-size: cover;height: 300px;background-image: url(/public/images/hastane2.jpg);"
+                            class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card text-center pb_card_v1 mb-4">
+                        <div style=" background-size: cover;height: 300px;background-image: url(/public/images/hastane3.jpg);"
+                            class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #F2F3F4;" class="pb_section">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="privilegesHeader" style="font-weight: bold;" class="mt-0 heading-border-top font-weight-normal"></h2>
+                    <p id="privilegesSubText"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    <div class="media pb_media_v1 mb-5">
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-desktop"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader1" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText1" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg">
+                    <div class="media pb_media_v1 mb-5">
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-happy"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader2" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText2" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="media pb_media_v1 mb-5">
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-thumbs-up"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader3" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText3" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-lg">
+
+                    <div class="media pb_media_v1 mb-5">
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-bed"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader4" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText4" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg">
+                    <div class="media pb_media_v1 mb-5">
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-contacts"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader5" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText5" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="media pb_media_v1 mb-5">
+
+                        <div style="color:#1d82ff" class="icon border border-gray rounded-circle d-flex mr-3 display-4">
+                            <i class="ion-md-git-compare"></i></div>
+                        <div class="media-body">
+                            <h3 id="privilegesHeader6" class="mt-0 pb_font-17 font-weight-bold"></h3>
+                            <p id="privilegesText6" class="pb_font-14 font-weight-bold"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="pb_section pb_testimonial_v1" data-section="testimonials" id="section-testimonials">
+        <div class="container">
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="commentsHeader" class="mt-0 heading-border-top font-weight-normal"></h2>
+                    <p id="commentsSubText"></p>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-10 col-sm-12 mb-5">
+                    <div id="hizmetYorumlari" class="single-item-no-arrow pb_slide_v1">
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+
+
+    <section class="pb_section" data-section="contact" id="section-contact">
+        <div class="container">
+
+            <div class="row justify-content-md-center text-center mb-5">
+                <div class="col-lg-7">
+                    <h2 id="contactFooterHeader" class="mt-0 heading-border-top font-weight-normal"></h2>
+                    <p id="contactFooterSubText1"></p>
+                    <p id="contactFooterSubText2"></p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-8 pr-md-5 pr-sm-0 mb-4">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label id="contactNameInputLabel" for="contactNameInput"> </label>
+                                <input type="text" class="form-control p-3 rounded-0 contactInputs"
+                                    id="contactNameInput">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label id="contactEmailInputLabel" for="contactEmailInput"></label>
+                                <input type="text" class="form-control p-3 rounded-0 contactInputs"
+                                    id="contactEmailInput">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="contactTextareaLabel" for="contactTextarea"> </label>
+                        <textarea cols="30" rows="5" class="form-control p-3 rounded-0 contactInputs"
+                            id="contactTextarea"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button id="contactInfoBtn"
+                            class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0"></button>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <ul class="pb_contact_details_v1">
+                        <li>
+                            <span id="contactMailInfoText" class="text-uppercase"></span>
+                            <%-eposta%>
+                        </li>
+                        <li>
+                            <span id="contactPhoneInfoText" class="text-uppercase"></span>
+                            <a id="phoneNumber" name="<%-telefon%>" href="tel://90<%-telefon%>">
+                                +90 <%-telefon%>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- END section -->
+
+    <footer style="background-image: url(/public/images/footerManzara.jpg); background-size: cover;"
+        class="pb_footer bg-light" role="contentinfo">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="<%-facebook%>" target="_blank" class="p-2"><i
+                                    style="font-size: 24px;" class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="<%-instagram%>" target="_blank" class="p-2"><i
+                                    style="font-size: 24px;" class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="<%-youtube%>" target="_blank" class="p-2"><i
+                                    style="font-size: 24px;" class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p id="footerText" style="font-weight: bold;" class="pb_font-14"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://api.whatsapp.com/send?phone=90<%-telefon%>&text=Merhaba, Bilgi almak istiyorum." class="float"
+        target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <!-- loader -->
+    <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#FDA04F" /></svg></div>
+
+    <div data-disable="disabled" style="display:none" id="quills"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/jquery-1.11.3.min.js"></script>
+    <script src="/public/js/bootstrap4.0/bootstrap2.min.js"></script>
+    <script src="/public/js/system/library/popper.min.js"></script>
+    <script src="/public/js/cookies.min.js"></script>
+    <script src="/public/js/slick.min.js"></script>
+    <script src="/public/js/bootstrap-select.min.js"></script>
+    <script src="/public/js/jquery.waypoints.min.js"></script>
+    <script src="/public/js/jquery.easing.1.3.js"></script>
+    <script src="/public/js/select2/select2.js"></script>
+    <script src="/public/js/intlTelInput.js"></script>
+    <script src="/public/js/system/library/quill.js"></script>
+    <script src="/public/js/system/homeLang.js"></script>
+
+    <script src="/public/js/system/main.js"></script>
+    <script type="text/javascript">
+        //Öncesi Sonrası
+        let beforeAfter = <%-JSON.stringify(beforeAfter)%>;
+        for (let i = 0; i < beforeAfter.length; i++) {
+            $("#beforeAfter").append(`
+            <div>
+                <img src="`+ beforeAfter[i].beforeAfter + `" alt="" class="img-fluid">
+            </div>
+        `);
+        };
+
+        // Saç Ekimine Dair
+        let slidersLang = navigator.language || navigator.userLanguage;
+        if (!Cookies.get('lang')) {
+            if (slidersLang == 'tr') {
+                Cookies.set('lang', 'TR');
+                currentLang = 'TR';
+            }
+            else if (slidersLang == 'en') {
+                Cookies.set('lang', 'EN');
+                currentLang = 'EN';
+            }
+            else if (slidersLang == 'ru') {
+                Cookies.set('lang', 'RU');
+                currentLang = 'RU';
+            }
+            else if (slidersLang == 'fr') {
+                Cookies.set('lang', 'FR');
+                currentLang = 'FR';
+            }
+            else if (slidersLang == 'ar') {
+                Cookies.set('lang', 'AR');
+                currentLang = 'AR';
+            }
+            else if (slidersLang == 'pt') {
+                Cookies.set('lang', 'PT');
+                currentLang = 'PT';
+            }
+            else if (slidersLang == 'it') {
+                Cookies.set('lang', 'IT');
+                currentLang = 'IT';
+            }
+            else if (slidersLang == 'de') {
+                Cookies.set('lang', 'DE');
+                currentLang = 'DE';
+            }
+            else if (slidersLang == 'es') {
+                Cookies.set('lang', 'ES');
+                currentLang = 'ES';
+            }
+            else {
+                Cookies.set('lang', 'TR');
+                currentLang = 'TR';
+            };
+        };
+        let sliders = <%-JSON.stringify(slider)%>;
+        let lang = Cookies.get('lang');
+            function quillGetHTML(inputDelta) {
+                var tempCont = document.createElement("div");
+                (new Quill(tempCont)).setContents(inputDelta);
+                return tempCont.getElementsByClassName("ql-editor")[0].innerHTML;
+            };
+        for (let i = 0; i < sliders.length; i++) {
+            let quill = new Quill("#quills", {
+                theme: 'snow',
+                disable: true,
+                readOnly: true,
+                scrollingContainer: false
+            });
+            let tests = quillGetHTML(quill.setContents((lang == 'TR' ? sliders[i].yaziTR : (lang == 'EN' ? sliders[i].yaziEN : (lang == 'ES' ? sliders[i].yaziES : (lang == 'FR' ? sliders[i].yaziFR : (lang == 'DE' ? sliders[i].yaziDE : (lang == 'IT' ? sliders[i].yaziIT : (lang == 'AR' ? sliders[i].yaziAR : (lang == 'PT' ? sliders[i].yaziPT : sliders[i].yaziRU))))))))));
+
+            
+            $("#slidersCerceve").append(`
+                        <div>
+                            <div class="d-lg-flex d-md-block slide_content">
+                                <div class="pb_content-media"
+                                    style="background-image: url(`+ sliders[i].gorsel + `);"></div>
+                                <div class="slide_content-text text-center">
+                                    <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-handcuffs"></i>
+                                    </div>
+                                    <h3 class="font-weight-normal mt-0 mb-4">`+(lang == 'TR' ? sliders[i].baslikTR : (lang == 'EN' ? sliders[i].baslikEN : (lang == 'ES' ? sliders[i].baslikES : (lang == 'FR' ? sliders[i].baslikFR : (lang == 'DE' ? sliders[i].baslikDE : (lang == 'IT' ? sliders[i].baslikIT : (lang == 'AR' ? sliders[i].baslikAR : (lang == 'PT' ? sliders[i].baslikPT : sliders[i].baslikRU))))))))+`</h3>
+                                    <div id="`+sliders[i]._id+`"></div>
+                                </div>
+                            </div>
+                        </div>       
+        
+        `);
+        $("#"+sliders[i]._id).html(quillGetHTML(quill.setContents((lang == 'TR' ? sliders[i].yaziTR : (lang == 'EN' ? sliders[i].yaziEN : (lang == 'ES' ? sliders[i].yaziES : (lang == 'FR' ? sliders[i].yaziFR : (lang == 'DE' ? sliders[i].yaziDE : (lang == 'IT' ? sliders[i].yaziIT : (lang == 'AR' ? sliders[i].yaziAR : (lang == 'PT' ? sliders[i].yaziPT : sliders[i].yaziRU)))))))))));
+        $(".ql-toolbar").remove();
+        };
+        
+
+        // Hizmet Yorumları
+        let comments = <%-JSON.stringify(comments)%>;
+        for (let i = 0; i < comments.length; i++) {
+            $("#hizmetYorumlari").append(`
+                        <div>
+                            <div class="media">
+                                <img class="d-flex img-fluid rounded-circle mb-sm-5"
+                                    src="`+comments[i].gorsel+`" alt="Generic placeholder image">
+                                <div class="media-body pl-md-5 pl-sm-0">
+                                    <blockquote>
+                                        <p>&ldquo;`+ (lang == 'TR' ? comments[i].hastaYorumTR : (lang == 'EN' ? comments[i].hastaYorumEN : (lang == 'ES' ? comments[i].hastaYorumES : (lang == 'FR' ? comments[i].hastaYorumFR : (lang == 'DE' ? comments[i].hastaYorumDE : (lang == 'IT' ? comments[i].hastaYorumIT : (lang == 'AR' ? comments[i].hastaYorumAR : (lang == 'PT' ? comments[i].hastaYorumPT : comments[i].hastaYorumRU)))))))) +`  &rdquo;</p>
+                                        <p class="pb_author">
+                                            <cite class="text-uppercase">`+comments[i].hastaAdi+`</cite>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+            `);
+        };
+
+        
+
+    </script>
+</body>
