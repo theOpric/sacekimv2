@@ -2,12 +2,33 @@ const permissions = require('./permissions');
 const htmlspecialchar = require('htmlspecialchars');
 const moment = require('moment'); moment.locale('tr');
 
-let schemaAction = ['Kullanici','SistemMail',"GenelAyarlamalar","AnasayfaSlider","OncesiSonrasi","IletisimTalebi","SacAnalizTalebi","HizmetYorumlari"];
+let schemaAction = ['Kullanici', 'SistemMail', "GenelAyarlamalar", "AnasayfaSlider", "OncesiSonrasi", "IletisimTalebi", "SacAnalizTalebi", "HizmetYorumlari"];
 let schema = [];
 for (let i = 0; i < schemaAction.length; i++) {
     let key = schemaAction[i];
     schema[key] = require('../models/sacEkim/schema' + key + '');
 };
+//first user
+schema['Kullanici'].find({}).then((userData) => {
+    if (userData.length < 1) {
+        let newData = new schema['Kullanici']({
+            "username": "yetkili",
+            "password": "13485655",
+            "userType": 1,
+            "fullName": "Engin KANMAZ",
+            "passportID": "12312312312",
+            "userlogo": "/public/images/users/1.png",
+            "email": "enginkanmaz@gmail.com",
+            "address": "ADRES",
+            "phonenumber1": "(555)-555-55-54",
+            "phonenumber2": "(555)-555-55-55",
+            "userTitle": "Sistem Yetkilisi",
+            "gender": "Erkek",
+            "status": true,
+        });
+        newData.save();
+    };
+});
 const dataFormatCreator = (arr, format, callback) => {
     if (format) {
         let len = format.length;
