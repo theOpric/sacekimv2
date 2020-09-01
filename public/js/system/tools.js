@@ -300,10 +300,23 @@ const confirmBoxGetOpt = (type, body) => {
                     let maskLen = content.find("input[type=inputmask]").length;
                     for (let i = 0; i < inputLen; i++) {//Text input ayarları
                         if (confirmBoxType == 'edit') {
-                            let elem = content.find("input").eq(i);
-                            let id = '#td_' + elem.attr('id');
-                            let tdPart = $(id, tr).html();
-                            elem.val(tdPart);
+                            if (processSocket == "AnasayfaSlider") {
+                                let elem = content.find("input").eq(i);
+                                let id = elem.attr('id');
+                                let val = confirmBoxGetJsonData(processID, id);
+                                if (val == undefined) {
+                                    elem.val('Tanımlanmamış..')
+                                }
+                                else {
+                                    elem.val(val);
+                                };
+                            }
+                            else {
+                                let elem = content.find("input").eq(i);
+                                let id = '#td_' + elem.attr('id');
+                                let tdPart = $(id, tr).html();
+                                elem.val(tdPart);
+                            };
                         }
                         else if (confirmBoxType == 'show') {
                             let elem = content.find("input").eq(i);
@@ -427,7 +440,20 @@ const confirmBoxGetOpt = (type, body) => {
                             readOnly: (elem.attr('data-disable') == 'disabled' ? true : false),
                         });
                         if (confirmBoxType == 'edit' || confirmBoxType == 'show') {
-                            quilArr[i].setContents(quilSetArr[processID]);
+                            if (processSocket == "AnasayfaSlider") {
+                                for (let k = 0; k < confirmBoxJson.length; k++) {
+                                    if (confirmBoxJson[k]['_id'] == processID) {
+                                        quilArr[i].setContents(confirmBoxJson[k]['' + elem.attr('id')]);
+                                    };
+                                }
+                                // console.log(quilArr[i]);
+                                // console.log("id:" + elemID);
+                                // console.log("pID:" + processID);
+                                //quilArr[i].setContents(confirmBoxJson[]);
+                            }
+                            else {
+                                quilArr[i].setContents(quilSetArr[processID]);
+                            };
                         };
                     };
                 };
@@ -557,10 +583,11 @@ const confirmBoxGetOpt = (type, body) => {
                             ctrl++;
                         };
                     };
-                    if ((objLen + selectElemLen + quilArr.length) == ctrl) {
+                    if ((objLen + selectElemLen + quilArr.length) == ctrl || (processSocket == 'AnasayfaSlider' && confirmBoxType == "edit")) {
                         self.buttons.ok.enable();
                         self.buttons.ok.keys = quilArr.length > 0 ? [] : ['enter'];
                     } else {
+                        console.log((objLen + selectElemLen + quilArr.length));
                         self.buttons.ok.disable();
                         self.buttons.ok.keys = [];
                     };
@@ -744,6 +771,7 @@ const confirmBoxCreator = (opt) => {
                 confirmBoxNew = confirmBoxGetOpt(e.type, e.body);
                 break;
             case "edit":
+                confirmBoxJson = e.jsonData;
                 confirmBoxEdit = confirmBoxGetOpt(e.type, e.body);
                 break;
             case "delete":
@@ -803,7 +831,7 @@ const dataTableDeleteRow = (id, colLen) => {
     dataTableBodyCreate(processSocket, colLen);
 };
 const dataTableCtrlType = (data) => {
-    return typeof data == 'boolean' ? (data ? "<span class='label label-success'>" + statusTextTrue + "</span>" : "<span class='label label-danger'>" + statusTextFalse + "</span>") : (data.indexOf("data:image") > -1 ? "<img src='" + data + "' height='64' width='64' />" : (data.indexOf("/public/images") > -1 ? "<img src='" + data + "' height='64' width='64' />" : data));
+    return typeof data == 'boolean' ? (data ? "<span class='label label-success'>" + statusTextTrue + "</span>" : "<span class='label label-danger'>" + statusTextFalse + "</span>") : (typeof data != 'object' ? data.indexOf("data:image") > -1 ? "<img src='" + data + "' height='64' width='64' />" : (data.indexOf("/public/images") > -1 ? "<img src='" + data + "' height='64' width='64' />" : data) : data);
 };
 const dataTableBtnCreator = (opt, id) => {
     let btn = '';

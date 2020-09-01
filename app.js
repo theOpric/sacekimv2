@@ -110,7 +110,7 @@ const socketListener = [//Socket dinleyicilerini dinamik oluşturmak için
     {
         schemaName: 'AnasayfaSlider',
         manager: pageAnasayfaSlider,
-        process: { Click: true, Insert: true, Delete: true },
+        process: { Click: true, Insert: true, Delete: true, Update: true },
         permissions: [1]
     },
     {
