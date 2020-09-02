@@ -1,5 +1,4 @@
 $(document).ready(function ($) {
-
 	"use strict";
 	let socket = io();
 	var loader = function () {
@@ -67,6 +66,11 @@ $(document).ready(function ($) {
 			draggable: false,
 			adaptiveHeight: true
 		});
+		$(".single-item").on("beforeChange", function () {
+			//change color here
+			var elmnt = document.getElementById("section-practicing-areas");
+			elmnt.scrollIntoView({ behavior: 'smooth'});
+		})
 
 		$('.single-item-no-arrow').slick({
 			slidesToShow: 1,
