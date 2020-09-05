@@ -280,7 +280,7 @@ const forTurkish = () => {
 const forEnglish = () => {
     homeText = "Home page";
     aboutText = "about us";
-    whyUsText = "Why&nbspWe & nbsp?";
+    whyUsText = "Why&nbspWe &nbsp?";
     sliderText = "About Hair Transplantation";
     myHospitalsText = "Our hospitals";
     commentsText = "Opinions";
@@ -373,7 +373,7 @@ const forEnglish = () => {
 const forEspanol = () => {
     homeText = "Página de inicio";
     aboutText = "sobre nosotros";
-    whyUsText = "¿Por qué&nbspWe & nbsp?";
+    whyUsText = "¿Por qué&nbspWe &nbsp?";
     sliderText = "Acerca del trasplante de cabello";
     myHospitalsText = "Nuestros hospitales";
     commentsText = "Opiniones";
@@ -466,7 +466,7 @@ const forEspanol = () => {
 const forFrancais = () => {
     homeText = "Page d'accueil";
     aboutText = "à propos de nous";
-    whyUsText = "Pourquoi&nbspNous & nbsp?";
+    whyUsText = "Pourquoi&nbspNous &nbsp?";
     sliderText = "À propos de la greffe de cheveux";
     myHospitalsText = "Nos hôpitaux";
     commentsText = "Des avis";
@@ -559,7 +559,7 @@ const forFrancais = () => {
 const forDeutsch = () => {
     homeText = "Startseite";
     aboutText = "Über uns";
-    whyUsText = "Warum&nbspWir & nbsp?";
+    whyUsText = "Warum&nbspWir &nbsp?";
     sliderText = "Über Haartransplantation";
     myHospitalsText = "Unsere Krankenhäuser";
     commentsText = "Meinungen";
@@ -652,7 +652,7 @@ const forDeutsch = () => {
 const forItaliano = () => {
     homeText = "Pagina iniziale";
     aboutText = "riguardo a noi";
-    whyUsText = "Perché&nbspWe & nbsp?";
+    whyUsText = "Perché&nbspWe &nbsp?";
     sliderText = "Informazioni sul trapianto di capelli";
     myHospitalsText = "I nostri ospedali";
     commentsText = "Opinioni";
@@ -745,7 +745,7 @@ const forItaliano = () => {
 const forArabic = () => {
     homeText = "الصفحة الرئيسية";
     aboutText = "معلومات عنا";
-    whyUsText = "لماذا&nbspنحن & nbsp؟";
+    whyUsText = "لماذا&nbspنحن &nbsp؟";
     sliderText = "حول زراعة الشعر";
     myHospitalsText = "مستشفياتنا";
     commentsText = "آراء";
@@ -838,7 +838,7 @@ const forArabic = () => {
 const forPortogues = () => {
     homeText = "Pagina inicial";
     aboutText = "sobre nós";
-    whyUsText = "Por que&nbspnós & nbsp?";
+    whyUsText = "Por que&nbspnós &nbsp?";
     sliderText = "Sobre o transplante capilar";
     myHospitalsText = "Nossos hospitais";
     commentsText = "Opiniões";
@@ -931,7 +931,7 @@ const forPortogues = () => {
 const forRussian = () => {
     homeText = "Домашняя страница";
     aboutText = "насчет нас";
-    whyUsText = "Почему&nbsp& nbsp?";
+    whyUsText = "Почему&nbsp&nbsp?";
     sliderText = "О трансплантации волос";
     myHospitalsText = "Наши больницы";
     commentsText = "Мнения";
