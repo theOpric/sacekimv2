@@ -1,0 +1,158 @@
+    
+    <!-- END nav -->
+    <section style="margin-top: 10%;" class="pb-section">
+
+    <div class="main-content">
+        <div style="font-size: 64px;" class="text-center">
+            <i class="entypo-attention"></i>
+        </div>
+        <div class="text-center">
+            <h1>404</h1>
+            <p id="error404"></p>
+        </div>
+        <hr />
+        <div style="font-size: 64px;" class="text-center">
+            <a rel="nofollow" title="Homepage" class="navbar-brand" href="/"><img height="160" width="332" src="/public/images/homeLogo2.png" alt="istanbul hair aesthetic logo"/></a>
+        </div>
+    
+    </div>
+</section>
+    <!-- END section -->
+    <a title="whatsapp" rel="nofollow"
+        href="https://api.whatsapp.com/send?phone=90<%-telefon%>&text=Merhaba, Bilgi almak istiyorum." class="float"
+        target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <!-- loader -->
+    <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#FDA04F" /></svg>
+    </div>
+    <div style="display:none" id="analiz" class="analizwizard bg-gray">
+        <i id="hideShowAnaliz" class="ion-md-arrow-dropdown-circle"></i>
+        <div style="display:inline" id="step1">
+            <div id="step1Header">
+                <button id="oneMinuteAnalizOpened" class="analizHeader"></button>
+            </div>
+            <div id="step1">
+                <img class="genderImg genderMale rounded-circle" src="/public/images/home/analizMan.png"
+                    alt="person male" />
+                <img class="genderImg genderWoman rounded-circle" src="/public/images/home/analizWoman.png"
+                    alt="person women" />
+                <p id="step1Text"></p>
+            </div>
+        </div>
+        <div style="display:none" id="headerAnaliz1">
+            <h4 id="headerAnaliz1H4" class="headerDokulme"></h4>
+            <hr>
+        </div>
+        <div id="step2" class="col-md-12" style="display: none;">
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/12x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/22x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/32x.png" alt="hair loss type man" />
+            </div>
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/42x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/52x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/62x.png" alt="hair loss type man" />
+            </div>
+            <div class="dokulmeErkek">
+                <img class="selectTip" src="/public/images/home/male/72x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/82x.png" alt="hair loss type man" />
+                <img class="selectTip" src="/public/images/home/male/92x.png" alt="hair loss type man" />
+            </div>
+            <div style="display:inline" class="dokulmeKadin">
+                <img class="selectTip" src="/public/images/home/female/12x.png" alt="hair loss type female" />
+                <img class="selectTip" src="/public/images/home/female/22x.png" alt="hair loss type female" />
+                <img class="selectTip" src="/public/images/home/female/32x.png" alt="hair loss type female" />
+            </div>
+            <div style="display:inline" class="dokulmeKadin">
+                <img class="selectTip" src="/public/images/home/female/42x.png" alt="hair loss type female" />
+                <img class="selectTip" src="/public/images/home/female/52x.png" alt="hair loss type female" />
+                <img class="selectTip" src="/public/images/home/female/62x.png" alt="hair loss type female" />
+            </div>
+            <div id="prevButtons">
+                <button class="bottom-left prevBtn" name="goTo1"></button>
+                <button id="notSureBtn"></button>
+            </div>
+        </div>
+        <div style="display:none" id="headerAnaliz2" class="headerAnaliz">
+            <h4 id="yasH4" class="headerYas"></h4>
+            <hr>
+        </div>
+        <div id="step3" style="display: none;">
+            <button class="yasBtn">18-25</button>
+            <button class="yasBtn">26-35</button>
+            <button class="yasBtn">36-45</button>
+            <button class="yasBtn">45+</button>
+        </div>
+        <div style="display: none;" id="prevButtons1" class="prevButtons">
+            <button class="bottom-left prevBtn"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz3" class="headerAnaliz">
+            <h4 id="ilacH4"></h4>
+            <hr>
+        </div>
+        <div id="step4" style="display: none;">
+            <button id="ilacHayirBtn" class="yasBtn"></button>
+            <button id="ilacEvetBtn" class="yasBtn"></button>
+            <input id="ilacEvet" maxlength="100" class="ilacInput input-spinner" placeholder="" type="text" />
+            <button id="ilacInputEvet" class="nextBtn1"></button>
+        </div>
+        <div style="display: none;" id="prevButtons2" class="prevButtons">
+            <button class="bottom-left prevBtn"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz4" class="headerAnaliz">
+            <h4 id="hastalikH4" class="headerYas"></h4>
+            <hr>
+        </div>
+        <div id="step5" style="display: none;">
+            <button id="btnHIV" class="yasBtn2"></button>
+            <button id="btnHepatit" class="yasBtn2"></button>
+            <button id="btnKalp" class="yasBtn2"></button>
+            <button id="btnHastalikYok" class="yasBtn2"></button>
+        </div>
+        <div style="display: none;" id="prevButtons3">
+            <button class="bottom-left prevBtn" name="goTo4"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz5" class="headerAnaliz">
+            <h4 id="analizH3" class="headerYas"></h4>
+            <hr>
+        </div>
+        <div id="step6" style="display: none;">
+            <input id="phoneInput" placeholder="" type="text" />
+            <input id="analizInputNameSurname" class="ilacInput input-spinner" placeholder="" type="text" />
+            <input id="analizInputMail" class="ilacInput input-spinner" placeholder="" type="email" />
+            <button id="completeBtn"></button>
+        </div>
+        <div style="display: none;" id="prevButtons4">
+            <button class="bottom-left prevBtn" name="goTo5"></button>
+        </div>
+        <div style="display:none" id="headerAnaliz6" class="headerAnaliz">
+            <h4 id="analizSuccess" class="headerYas"></h4>
+            <hr>
+        </div>
+        <div id="step7" style="display: none;">
+            <p id="completeText"></p>
+            <button id="closeBtn"></button>
+        </div>
+    </div>
+    <button style="display:inline" id="oneMinuteAnalizClosed" class="analizHeader2"></button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/jquery-1.11.3.min.js"></script>
+    <script src="/public/js/bootstrap4.0/bootstrap2.min.js"></script>
+    <script src="/public/js/system/library/popper.min.js"></script>
+    <script src="/public/js/cookies.min.js"></script>
+    <script src="/public/js/slick.min.js"></script>
+    <script src="/public/js/bootstrap-select.min.js"></script>
+    <script src="/public/js/jquery.waypoints.min.js"></script>
+    <script src="/public/js/jquery.easing.1.3.js"></script>
+    <script src="/public/js/select2/select2.js"></script>
+    <script src="/public/js/intlTelInput.js"></script>
+    <script src="/public/js/system/library/quill.js"></script>
+    <script src="/public/js/system/homeLang.js"></script>
+
+    <script src="/public/js/system/main.js"></script>
+</body>
