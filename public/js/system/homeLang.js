@@ -162,12 +162,7 @@ let contactFooterSubText2;
 //footer
 let footerText;
 
-//404
-let error404;
-
 const forTurkish = () => {
-    //404
-    error404 = "Sayfa bulunamadı!";
 
     //navbar
     homeText = "Anasayfa";
@@ -283,7 +278,6 @@ const forTurkish = () => {
     footerText = "” Dünyada İstanbul kadar güzel görünüşlü başka bir kent bulunmadığını </br> söyleyenler, gerçekten haklıymışlar. ” (Chateaubrıand)";
 };
 const forEnglish = () => {
-    error404 = "Page not found!";
     homeText = "Home page";
     aboutText = "about us";
     whyUsText = "Why&nbspWe &nbsp?";
@@ -377,7 +371,6 @@ const forEnglish = () => {
 
 };
 const forEspanol = () => {
-    error404 = "¡Página no encontrada!";
     homeText = "Página de inicio";
     aboutText = "sobre nosotros";
     whyUsText = "¿Por qué&nbspWe &nbsp?";
@@ -471,7 +464,6 @@ const forEspanol = () => {
 
 };
 const forFrancais = () => {
-    error404 = "Page non trouvée!";
     homeText = "Page d'accueil";
     aboutText = "à propos de nous";
     whyUsText = "Pourquoi&nbspNous &nbsp?";
@@ -565,7 +557,6 @@ const forFrancais = () => {
 
 };
 const forDeutsch = () => {
-    error404 = "Seite nicht gefunden!";
     homeText = "Startseite";
     aboutText = "Über uns";
     whyUsText = "Warum&nbspWir &nbsp?";
@@ -659,7 +650,6 @@ const forDeutsch = () => {
 
 };
 const forItaliano = () => {
-    error404 = "Seite nicht gefunden!";
     homeText = "Pagina iniziale";
     aboutText = "riguardo a noi";
     whyUsText = "Perché&nbspWe &nbsp?";
@@ -753,7 +743,6 @@ const forItaliano = () => {
 
 };
 const forArabic = () => {
-    error404 = "الصفحة غير موجودة!";
     homeText = "الصفحة الرئيسية";
     aboutText = "معلومات عنا";
     whyUsText = "لماذا&nbspنحن &nbsp؟";
@@ -847,7 +836,6 @@ const forArabic = () => {
 
 }
 const forPortogues = () => {
-    error404 = "Página não encontrada!";
     homeText = "Pagina inicial";
     aboutText = "sobre nós";
     whyUsText = "Por que&nbspnós &nbsp?";
@@ -941,7 +929,6 @@ const forPortogues = () => {
 
 }
 const forRussian = () => {
-    error404 = "Страница не найдена!";
     homeText = "Домашняя страница";
     aboutText = "насчет нас";
     whyUsText = "Почему&nbsp&nbsp?";
@@ -1035,8 +1022,6 @@ const forRussian = () => {
 };
 //Apply
 const forApply = () => {
-    //404
-    $("#error404").text(error404);
     //navbar
     $("#homeText").text(homeText);
     $("#aboutText").text(aboutText);

@@ -69,7 +69,7 @@ $(document).ready(function ($) {
 		$(".single-item").on("beforeChange", function () {
 			//change color here
 			var elmnt = document.getElementById("section-practicing-areas");
-			elmnt.scrollIntoView({ behavior: 'smooth' });
+			elmnt.scrollIntoView({ behavior: 'smooth'});
 		})
 
 		$('.single-item-no-arrow').slick({
@@ -591,32 +591,22 @@ $(document).ready(function ($) {
 				}
 				else {
 					$("#contactTextarea").focus();
-					$("#contactTextarea").css("border", "3px solid red")
 				}
 			}
 			else {
 				$("#contactEmailInput").focus();
-				$("#contactEmailInput").css("border", "3px solid red")
 			}
 		}
 		else {
 			$("#contactNameInput").focus();
-			$("#contactNameInput").css("border", "3px solid red")
 			//
 		};
 	});
 	$(".contactInputs").keyup(function () {
 		let len = $(this).val().length;
-		let objID = $(this).attr('id');
-		if (objID == "contactTextarea" && len >= 10) {
-			$(this).css("border", "1px solid #CACFD2");
+		if (len > 4) {
+			$(this).css("border", "1px solid #CACFD2")
 		}
-		else if (objID == "contactEmailInput" && len >= 5) {
-			$(this).css("border", "1px solid #CACFD2");
-		}
-		else if (objID == "contactNameInput" && len >= 3) {
-			$(this).css("border", "1px solid #CACFD2");
-		};
 	});
 
 	// İletişim2
@@ -642,32 +632,22 @@ $(document).ready(function ($) {
 				}
 				else {
 					$("#contactTextarea2").focus();
-					$("#contactTextarea2").css("border", "3px solid red")
 				}
 			}
 			else {
 				$("#contactEmailInput2").focus();
-				$("#contactEmailInput2").css("border", "3px solid red")
 			}
 		}
 		else {
 			$("#contactNameInput2").focus();
-			$("#contactNameInput2").css("border", "3px solid red")
 			//
 		};
 	});
 	$(".contactInputs2").keyup(function () {
 		let len = $(this).val().length;
-		let objID = $(this).attr('id');
-		if (objID == "contactTextarea2" && len >= 10) {
-			$(this).css("border", "1px solid #CACFD2");
+		if (len > 4) {
+			$(this).css("border", "1px solid #CACFD2")
 		}
-		else if (objID == "contactEmailInput2" && len >= 5) {
-			$(this).css("border", "1px solid #CACFD2");
-		}
-		else if (objID == "contactNameInput2" && len >= 3) {
-			$(this).css("border", "1px solid #CACFD2");
-		};
 	});
 
 
